@@ -1,3 +1,7 @@
+html {
+    font-size: 14px;
+}
+
 body {
     background-color:#fcc;
 }
@@ -13,6 +17,7 @@ a {
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
     padding: 0.5em;
     margin: 1em 0;
+    font-size: 1.5rem
 }
 
 .left {
@@ -27,6 +32,7 @@ a {
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
     padding: 0.5em;
     margin: 1em 0;
+    font-size: 1.3rem;
 }
 
 .main figure {
@@ -56,4 +62,23 @@ figure span {
     box-shadow:rgba(0, 0, 0, 0.2);
     padding: 0.5em;
     margin: 1em 0;
+}
+
+.footer ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer li {
+    list-style-type: none;
+
+}
+
+.footer a {
+    display: block;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 1.4rem;
 }
