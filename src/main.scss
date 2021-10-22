@@ -1,7 +1,7 @@
-$wide-screen-breakpoint: 810px;
+$wide-screen-breakpoint: 800px;
 
 html {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 body {
@@ -14,42 +14,42 @@ a {
     text-decoration: underline;
 }
 
-@media screen and (min-width: $wide-screen-breakpoint) {
-    .container {
+.container {
+    @media screen and (min-width: $wide-screen-breakpoint) {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         gap: 0.5rem;
     }
 }
+
 .header {
     background-color: white;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
     padding: 0.5em;
     margin: 1em 0;
-    font-size: 1.5rem
-}
+    font-size: 1.5rem;
 
-@media screen and (min-width: $wide-screen-breakpoint) {
-    .header {
+    @media screen and (min-width: $wide-screen-breakpoint) {
         grid-column: span 12;
         margin: 0;
     }
-
 }
+
+
 
 .left {
     background-color: white;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
     padding: 0.5em;
     margin: 1em 0;
-}
 
-@media screen and (min-width: $wide-screen-breakpoint) {
-    .left {
+    @media screen and (min-width: $wide-screen-breakpoint) {
         grid-column: span 3;
         margin: 0;
     }
 }
+
+
 
 .main {
     background-color: white;
@@ -57,74 +57,73 @@ a {
     padding: 0.5em;
     margin: 1em 0;
     font-size: 1.3rem;
-}
 
-@media screen and (min-width: $wide-screen-breakpoint) {
-    .main {
+    @media screen and (min-width: $wide-screen-breakpoint) {
         grid-column: span 6;
         margin: 0;
+    }
+
+    figure {
+        float: left;
+        margin: 5px 10px 10px 0;
+
+        img {
+            display:block;
+        }
+        
+        span {
+        display:block;
+        font-style: italic;
+        text-align: center;
+        }
     }
 }
 
 
-.main figure {
-    float: left;
-    margin: 5px 10px 10px 0;
-}
-
-figure img {
-    display:block;
-}
-
-figure span {
-    display:block;
-    font-style: italic;
-    text-align: center;
-}
 
 .right {
     background-color: white;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
     padding: 0.5em;
-    margin: 1em 0 ;
-}
+    margin: 1em 0;
 
-@media screen and (min-width: $wide-screen-breakpoint) {
-    .right {
+    @media screen and (min-width: $wide-screen-breakpoint) {
         grid-column: span 3;
         margin: 0;
     }
 }
+
+
 
 .footer {
     background-color: white;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
     padding: 0.5em;
     margin: 1em 0;
-}
 
-@media screen and (min-width: $wide-screen-breakpoint) {
-    .footer {
+    ul {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    li {
+        list-style-type: none;
+    }
+
+    a {
+        display: block;
+        padding: 0.5rem;
+        text-align: center;
+        font-size: 1.4rem;
+    }
+
+    @media screen and (min-width: $wide-screen-breakpoint) {
         grid-column: span 12;
-        margin: 0;
+        margin: 0;   
     }
 }
 
-.footer ul {
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 
-.footer li {
-    list-style-type: none;
 
-}
-
-.footer a {
-    display: block;
-    padding: 0.5rem;
-    text-align: center;
-    font-size: 1.4rem;
-}
