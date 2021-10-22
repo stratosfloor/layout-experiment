@@ -22,14 +22,23 @@ a {
     }
 }
 
-.header {
+@mixin card {
     background-color: white;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
     padding: 0.5em;
     margin: 1em 0;
+}
+
+@mixin wide-screen {
+    @media screen and (min-width: $wide-screen-breakpoint) {
+        @content;
+    }
+}
+.header {
+    @include card;
     font-size: 1.5rem;
 
-    @media screen and (min-width: $wide-screen-breakpoint) {
+    @include wide-screen {
         grid-column: span 12;
         margin: 0;
     }
@@ -38,12 +47,9 @@ a {
 
 
 .left {
-    background-color: white;
-    box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
-    padding: 0.5em;
-    margin: 1em 0;
+    @include card;
 
-    @media screen and (min-width: $wide-screen-breakpoint) {
+    @include wide-screen {
         grid-column: span 3;
         margin: 0;
     }
@@ -52,13 +58,11 @@ a {
 
 
 .main {
-    background-color: white;
-    box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
-    padding: 0.5em;
-    margin: 1em 0;
+    @include card;
+
     font-size: 1.3rem;
 
-    @media screen and (min-width: $wide-screen-breakpoint) {
+    @include wide-screen {
         grid-column: span 6;
         margin: 0;
     }
@@ -79,28 +83,17 @@ a {
     }
 }
 
-
-
 .right {
-    background-color: white;
-    box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
-    padding: 0.5em;
-    margin: 1em 0;
+    @include card;
 
-    @media screen and (min-width: $wide-screen-breakpoint) {
+    @include wide-screen {
         grid-column: span 3;
         margin: 0;
     }
 }
 
-
-
 .footer {
-    background-color: white;
-    box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
-    padding: 0.5em;
-    margin: 1em 0;
-
+    @include card;
     ul {
         padding: 0;
         display: flex;
@@ -119,7 +112,7 @@ a {
         font-size: 1.4rem;
     }
 
-    @media screen and (min-width: $wide-screen-breakpoint) {
+    @include wide-screen {
         grid-column: span 12;
         margin: 0;   
     }
