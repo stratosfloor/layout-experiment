@@ -1,5 +1,5 @@
 html {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 body {
@@ -12,13 +12,14 @@ a {
   text-decoration: underline;
 }
 
-@media screen and (min-width: 810px) {
+@media screen and (min-width: 800px) {
   .container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 0.5rem;
   }
 }
+
 .header {
   background-color: white;
   box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
@@ -26,26 +27,26 @@ a {
   margin: 1em 0;
   font-size: 1.5rem;
 }
-
-@media screen and (min-width: 810px) {
+@media screen and (min-width: 800px) {
   .header {
     grid-column: span 12;
     margin: 0;
   }
 }
+
 .left {
   background-color: white;
   box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
   padding: 0.5em;
   margin: 1em 0;
 }
-
-@media screen and (min-width: 810px) {
+@media screen and (min-width: 800px) {
   .left {
     grid-column: span 3;
     margin: 0;
   }
 }
+
 .main {
   background-color: white;
   box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
@@ -53,8 +54,7 @@ a {
   margin: 1em 0;
   font-size: 1.3rem;
 }
-
-@media screen and (min-width: 810px) {
+@media screen and (min-width: 800px) {
   .main {
     grid-column: span 6;
     margin: 0;
@@ -64,12 +64,10 @@ a {
   float: left;
   margin: 5px 10px 10px 0;
 }
-
-figure img {
+.main figure img {
   display: block;
 }
-
-figure span {
+.main figure span {
   display: block;
   font-style: italic;
   text-align: center;
@@ -81,25 +79,18 @@ figure span {
   padding: 0.5em;
   margin: 1em 0;
 }
-
-@media screen and (min-width: 810px) {
+@media screen and (min-width: 800px) {
   .right {
     grid-column: span 3;
     margin: 0;
   }
 }
+
 .footer {
   background-color: white;
   box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
   padding: 0.5em;
   margin: 1em 0;
-}
-
-@media screen and (min-width: 810px) {
-  .footer {
-    grid-column: span 12;
-    margin: 0;
-  }
 }
 .footer ul {
   padding: 0;
@@ -107,16 +98,25 @@ figure span {
   flex-direction: column;
   justify-content: center;
 }
-
+@media screen and (min-width: 800px) {
+  .footer ul {
+    flex-direction: row;
+  }
+}
 .footer li {
   list-style-type: none;
 }
-
 .footer a {
   display: block;
   padding: 0.5rem;
   text-align: center;
   font-size: 1.4rem;
+}
+@media screen and (min-width: 800px) {
+  .footer {
+    grid-column: span 12;
+    margin: 0;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

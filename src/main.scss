@@ -1,3 +1,5 @@
+@import 'mixins.scss';
+
 $wide-screen-breakpoint: 800px;
 
 html {
@@ -22,26 +24,6 @@ a {
     }
 }
 
-@mixin card {
-    background-color: white;
-    box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
-    padding: 0.5em;
-    margin: 1em 0;
-}
-
-@mixin wide-screen {
-    @media screen and (min-width: $wide-screen-breakpoint) {
-        @content;
-    }
-}
-
-@mixin responsive-box($span-size) {
-    @include wide-screen {
-        grid-column: span $span-size;
-        margin: 0;
-    }
-}
-
 .header {
     @include card;
     font-size: 1.5rem;
@@ -59,20 +41,18 @@ a {
     @include card;
     font-size: 1.3rem;
     @include responsive-box(6);
-
     figure {
         float: left;
         margin: 5px 10px 10px 0;
-
-        img {
+    }
+    figure img {
             display:block;
-        }
+    }
         
-        span {
+    figure span {
         display:block;
         font-style: italic;
         text-align: center;
-        }
     }
 }
 
